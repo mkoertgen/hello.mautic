@@ -1,0 +1,4 @@
+# Mautic cron jobs
+0,15,30,45 * * * * php /var/www/html/mautic/app/console mautic:segments:update
+5,20,35,50 * * * * php /var/www/html/mautic/app/console mautic:campaigns:update
+10,25,40,55 * * * * php /var/www/html/mautic/app/console mautic:campaigns:trigger
