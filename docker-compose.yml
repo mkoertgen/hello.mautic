@@ -13,11 +13,11 @@ x-base: &base
 services:
   mautic:
     <<: *base
-    image: mautic/mautic
+    image: mautic/mautic:apache
     depends_on:
       - mysql
     ports:
-      - "80:80"
+      - "8080:80"
     environment:
       MAUTIC_DB_HOST: mysql
       MAUTIC_DB_USER: mautic
