@@ -58,3 +58,7 @@ sudo systemctl restart apache2.service
 
 # 9. Install mautic cron jobs
 sudo cp mautic.crontab /etc/cron.d/mautic
+
+# 10. Make /var/log writeable, cf.:
+# - https://symfony.com/doc/current/setup/file_permissions.html
+sudo chmod -R 777 /var/log/
