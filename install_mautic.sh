@@ -57,4 +57,4 @@ sudo systemctl restart apache2.service
 # Now goto http://your-domain.com/mautic
 
 # 9. Install mautic cron jobs
-sudo cp mautic.cron /etc/cron.d/
+sudo cp mautic-cron /etc/cron.d/
