@@ -9,3 +9,6 @@
 
 # Cleanup GDPR each night
 0 5 * * * root /usr/bin/php /var/www/html/mautic/app/console mautic:maintenance:cleanup --gdpr --no-interaction >> /var/log/mautic-cron.log
+
+# Cleanup mautic cron log
+0 3 * * * root rm /var/log/mautic-cron.log
