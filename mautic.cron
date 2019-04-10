@@ -1,11 +1,11 @@
 # Mautic cron jobs
 # Segments & Campaigns
-0,15,30,45 * * * * /usr/bin/php /var/www/html/mautic/app/console mautic:segments:update
-5,20,35,50 * * * * /usr/bin/php /var/www/html/mautic/app/console mautic:campaigns:update
-10,25,40,55 * * * * /usr/bin/php /var/www/html/mautic/app/console mautic:campaigns:trigger
+0,15,30,45 * * * * root /usr/bin/php /var/www/html/mautic/app/console mautic:segments:update
+5,20,35,50 * * * * root /usr/bin/php /var/www/html/mautic/app/console mautic:campaigns:update
+10,25,40,55 * * * * root /usr/bin/php /var/www/html/mautic/app/console mautic:campaigns:trigger
 
 # Each month, 3rd day 
-0 4 3 * * /usr/bin/php /var/www/html/mautic/app/console mautic:iplookup:download
+0 4 3 * * root /usr/bin/php /var/www/html/mautic/app/console mautic:iplookup:download
 
 # Cleanup GDPR each night
-0 5 * * * /usr/bin/php /var/www/html/mautic/app/console mautic:maintenance:cleanup --gdpr --no-interaction
+0 5 * * * root /usr/bin/php /var/www/html/mautic/app/console mautic:maintenance:cleanup --gdpr --no-interaction
