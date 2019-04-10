@@ -39,7 +39,7 @@ services:
     <<: *base
     image: nginx
     ports:
-      - "443:443"
+      - "8443:443"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf
       - sslcerts:/etc/ssl/private
